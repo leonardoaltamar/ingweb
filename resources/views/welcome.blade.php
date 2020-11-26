@@ -1,7 +1,7 @@
 @extends('layaut.page')
 
 @section('title', 'Principal')
-    
+
 @section('content')
 <div class="slideshow">
     <ul class="slider">
@@ -33,7 +33,7 @@
     </ul>
 
     <!-- <ol class="pagination">
-			
+
 		</ol> -->
 
     <div class="left">
@@ -64,8 +64,9 @@
                 <img src="{{asset('img/logos/diamante.png')}}" class="card-img-top" alt="papas">
                     <div class="card-body">
                         <h4 class="card-title"><b>App brillante</b></h4>
-                        <p> El objetivo de <b>repair LP</b> es promoveer el trabajo independiente de tal manera que cualquier persona
-                            con conocimientos pero sin titulaciones pueda trabajar.
+                        <p> El objetivo de <b> ArteCol</b> es promover el emprendimiento de las mujeres que
+                            se dedidcan a la artesania y muchas otras cosas mas, para esto le ofrecemos un espacio
+                            en la web con el fin de que puedan vender todos sus productos.
                         </p>
                     </div>
                 </div>
@@ -86,8 +87,8 @@
                     <img src="{{asset('img/logos/informacion.png')}}" class="card-img-top" alt="papas">
                     <div class="card-body">
                         <h4 class="card-title"><b>Ahorro de tiempo</b></h4>
-                        <p>Ya no tendrás que gastar tiempo buscando talleres, mecanicos, tecnicos y plomeros para arreglar un problema.
-                            ¡Nosotros lo hacemos por tí!
+                        <p>La misma aplicación es la que se encarga de mostrar y distribuir todos tus productos,
+                            no necesitas gastar tiempo ni dinero en publicidad debido a que la app se encarga de eso
                         </p>
                     </div>
                 </div>
@@ -99,8 +100,8 @@
                     <img src="{{asset('img/logos/idea.png')}}" class="card-img-top" alt="papas">
                     <div class="card-body">
                         <h4 class="card-title"><b>Es innovadora</b></h4>
-                        <p>Son pocas las aplicaciones de este tipo, y el equipo de trabajo de garantiza una solución a los problemas con todos tus
-                            electrodomesticos y medios de transporte.
+                        <p>Son pocas las aplicaciones de este tipo, ya que no necesitas pagar ningun tipo de contribuición para
+                            usar nuestros servicios, ademas te garantizamos una correcta proteccion de los datos
                         </p>
                     </div>
                 </div>
@@ -111,8 +112,8 @@
                     <img src="{{asset('img/logos/scooter.png')}}" class="card-img-top" alt="papas">
                     <div class="card-body">
                         <h4 class="card-title"><b>Domicilios</b></h4>
-                        <p>No gastes dinero en transportadoras para llevar tu electrodomestico dañado, ¡ahora nosotros vamos
-                            a tu viviendda a solucionar tu problema!
+                        <p>La misma empresa cubrirá todos los transportes que le hagan a tus pedidos,
+                            no necesitarás pensar en como le llegará el producto al cliente, ¡Es genial!
                         </p>
                     </div>
                 </div>
@@ -154,8 +155,8 @@
                         <img src="{{asset('img/logos/persona1.png')}}" class="card-img-top" alt="papas">
                         <div class="card-body">
                             <h4 class="card-title"><b>¡Una app Increible!</b></h4>
-                            <p>Una aplicacion super util para todos en mi hogar, ahora no necesito llamar por
-                                telefono al taller, todo desde la app!</p>
+                            <p>Una aplicacion super util para todos, ahora no necesito llamar por
+                                contactar con las personas que se dedican a la artesania, todo es por la app</p>
                             <p class="autor">Juan Carlos Gomez</p>
                         </div>
                     </div>
@@ -169,7 +170,7 @@
                             <p>No se mucho de la tecnologia de hoy, pero la aplicacion es muy facil de usar, te
                                 muestran
                                 todo lo
-                                que debes hacer.</p>
+                                que debes hacer. Es muy intuitiva y eso la hace unica y especial</p>
                             <p class="autor">Mercedes Perez</p>
                         </div>
                     </div>
@@ -180,11 +181,9 @@
                         <img src="{{asset('img/logos/persona3.png')}}" class="card-img-top" alt="papas">
                         <div class="card-body">
                             <h4 class="card-title"><b>Revolucionaria</b></h4>
-                            <p>Ya todos mis amigos la tienen, la utilizo casi a diario para pedir todo lo que
-                                necesito,
-                                de
-                                mis
-                                aplicaciones favoritas.</p>
+                            <p>Esta aplicación me vino como anillo al dedo debido a que recientemente estaba
+                                empezando mi negocio de maquillaje, esta app era el plus que necesitaba mi negocio
+                            </p>
                             <p class="autor">Daniela Jaimes</p>
                         </div>
                     </div>

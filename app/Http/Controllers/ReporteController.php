@@ -69,8 +69,12 @@ class ReporteController extends Controller
 
     public function reporteOpiniones($idProducto){
         $calificacione = new calificacione();
-        $listOpiniones = $calificacione->join('personas', 'personas.id', '=', 'calificaciones.personas_id')->
-        where('productos_id', $idProducto)->get();
-        return $listOpiniones;
+        $data = $calificacione->join('personas', 'personas.id', '=', 'calificaciones.personas_id')->
+        where('productos_id', $idProducto)->select(
+            'personas.nombres','personas.apellidos','calificaciones.comentario','calificaciones.indice',
+            'calificaciones.id'
+        )->get();
+        $pdf = PDF::loadView('pdf.reporteOpiniones', compact('data'));
+        return $pdf->stream();
     }
 }

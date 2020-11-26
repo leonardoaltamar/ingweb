@@ -90,7 +90,6 @@
                     <th scope="col">descripcion</th>
                     <th scope="col">precio</th>
                     <th scope="col">cantidad</th>
-                    <th scope="col">IVA</th>
                     <th scope="col">categoria</th>
                     <th scope="col">Imagen</th>
                     <th scope="col">Acciones</th>
@@ -107,7 +106,6 @@
                                         <td>{{$product['descripcion']}}</td>
                                         <td>{{$product['precio']}}</td>
                                         <td>{{$product['cantidad']}}</td>
-                                        <td>{{$product['iva']}}</td>
                                         <td>{{$product['categoria']}}</td>
                                         <td>
                                             <center>

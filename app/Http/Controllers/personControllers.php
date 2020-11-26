@@ -22,9 +22,7 @@ class personControllers extends Controller
         $person->usuarios_id = $request->idUser;
 
         $person->save();
-        $message = "A";
-
-        view('home', compact('message'));
-        return redirect()->route('home', $message);
+        $message = "Gracias por logearse";
+        return view('home', compact('message'));
     }
 }

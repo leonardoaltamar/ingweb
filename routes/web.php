@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\calificarController;
 use App\Http\Controllers\DetalleController;
 use App\Http\Controllers\personControllers;
 use App\Http\Controllers\productController;
@@ -50,6 +51,17 @@ Route::post('product/{product}', [productController::class,'delete'])->name('pro
 
 //REPORTES
 Route::get('/shop/imprimir', [shopController::class, 'imprimir'])->name('shop.imprimir');
-Route::get('ventas/{id}',[shopController::class, 'reporteCompras'])->name('shop.ReporteVentas');
+Route::get('compras/{id}',[shopController::class, 'reporteCompras'])->name('shop.ReporteCompras');
+Route::get('Ventas',[ReporteController::class, 'reporteVentas'])->name('shop.ReporteVentas');
 Route::get('reporteProteccionDatos/{id}', [ReporteController::class, 'reporteProteccionDatos'])->name('reportes.proteccion');
 Route::get('reporteDetalle/{idfactura}', [ReporteController::class, 'reporteDetalle'])->name('reporte.detalle');
+Route::get('misProductos', [ReporteController::class, 'misProductos'])->name('reporte.misProductos');
+Route::get('reporteOpiniones/{idProducto}', [ReporteController::class, 'reporteOpiniones'])->name('reporte.opiniones');
+
+
+
+Route::get('/productoCal', [productController::class, 'productoCal'])->name('product.productoCal');
+
+//CALIFICAR
+
+Route::post('/shop/calificar', [calificarController::class, 'calificar'])->name('shop.calificar');

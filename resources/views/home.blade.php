@@ -5,7 +5,7 @@
 @section('content_header-child')
 
 <center>
-    <h2 class="mb-4">Bienvenido al portal de ArteCO</h2>
+    <h2 class="mb-4">Bienvenido al portal de ArteCOl</h2>
 </center>
 @endsection
 
@@ -24,7 +24,8 @@
                     @endif
                     {{ __('Lista de reportes mas buscados') }}
                     <ul>
-                        <li><a href="{{route('shop.ReporteVentas', Auth::user()->id)}}">Reporte de compras</a></li>
+                        <li><a href="{{route('shop.ReporteCompras', Auth::user()->id)}}">Reporte de compras</a></li>
+                        <li><a href="{{route('shop.ReporteVentas')}}">Reporte mis Ventas</a></li>
                         <li><a href="{{route('reportes.proteccion', Auth::user()->id)}}">Ley de proteccion de datos</a></li>
                     </ul>
                 </div>
@@ -36,12 +37,12 @@
 
 @section('js-child')
     @isset($message)
-    <script>
-        Swal.fire(
-            'Perfecto!',
-            'Los datos han sido ingresados correctamente',
-            'success'
-        )
-    </script>
+        <script>
+            Swal.fire(
+                'Perfecto!',
+                'Los datos han sido ingresados correctamente',
+                'success'
+            )
+        </script>
     @endisset
 @endsection

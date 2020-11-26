@@ -45,7 +45,7 @@ return [
     |
     */
 
-    'logo' => '<b>Admin</b>LTE',
+    'logo' => '<b>Arte</b>Col',
     'logo_img' => 'vendor/adminlte/dist/img/AdminLTELogo.png',
     'logo_img_class' => 'brand-image img-circle elevation-3',
     'logo_img_xl' => null,
@@ -262,7 +262,7 @@ return [
         [
             'text' => 'Ventas',
             'url'  => 'shop',
-            'icon' => 'fas fa-fw fa-shop',
+            'icon' => 'fas fa-fw fa-shopping-cart',
         ],
         [
             'text'    => 'Reportes',
@@ -281,24 +281,14 @@ return [
                             'url'  => '/detalle',
                         ],
                         [
-                            'text'    => 'level_two',
-                            'url'     => '#',
-                            'submenu' => [
-                                [
-                                    'text' => 'level_three',
-                                    'url'  => '#',
-                                ],
-                                [
-                                    'text' => 'level_three',
-                                    'url'  => '#',
-                                ],
-                            ],
+                            'text'    => 'Mis productos',
+                            'url'     => '/misProductos',
                         ],
                     ],
                 ],
                 [
-                    'text' => 'level_one',
-                    'url'  => '#',
+                    'text' => 'productos y opiniones',
+                    'url'  => '/productoCal',
                 ],
             ],
         ],

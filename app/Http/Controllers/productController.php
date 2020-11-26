@@ -23,6 +23,11 @@ class productController extends Controller
         return view('product.product', compact('persons', 'products'));
     }
 
+    public function productoCal(){
+        $productos = $this->modelProducto->all();
+        return view('product.calificacionProduct', compact('productos'));
+    }
+
     function add(Request $request){
         if(isset($request->idProduct)){
 

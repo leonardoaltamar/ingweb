@@ -3,8 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Productos generales</title>
-
+    <title>Reporte de ventas</title>
     <style>
         *{
             font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
@@ -51,15 +50,19 @@
         <img class="container__title__img" src="{{asset('img/logoartecol.jpeg')}}" alt="">
         <h3 class="title">Empresa comprometida con el emprendimiento</h3>
     </div>
-    <h3>Listado de productos</h3>
+
+    <h3>Listado de mis productos que se han vendido</h3>
 
     <table width="100%", cellpadding="5px", border=1 class="products">
         <br>
         <tbody>
-            <tr class="header">
+            <tr  class="header">
                 <td>id</td>
                 <td>descripcion</td>
                 <td>Categoria</td>
+                <td>Cantidad</td>
+                <td>Precio</td>
+                <td>SubTotal</td>
                 <td>Imagen</td>
             </tr>
             @foreach ($data as $item)
@@ -67,12 +70,15 @@
                 <td>{{$item->id}}</td>
                 <td>{{$item->descripcion}}</td>
                 <td>{{$item->categoria}}</td>
+                <td>{{$item->cantidad}}</td>
+                <td>${{$item->precio}}</td>
+                <td>${{$item->precio * $item->cantidad }}</td>
                 <td><img src="{{asset($item->imagen)}}" style="width:50px" alt=""></td>
             </tr>
             @endforeach
         </tbody>
     </table>
+    <br>
+    <br>
     <i>Propiedad de <b>ArteCO</b></i>
 </body>
-
-</html>

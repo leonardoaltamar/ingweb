@@ -3,8 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Productos generales</title>
-
+    <title>Mis productos</title>
     <style>
         *{
             font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
@@ -51,7 +50,9 @@
         <img class="container__title__img" src="{{asset('img/logoartecol.jpeg')}}" alt="">
         <h3 class="title">Empresa comprometida con el emprendimiento</h3>
     </div>
-    <h3>Listado de productos</h3>
+
+    <h3>Listado de mis productos</h3>
+
 
     <table width="100%", cellpadding="5px", border=1 class="products">
         <br>
@@ -72,7 +73,6 @@
             @endforeach
         </tbody>
     </table>
+
     <i>Propiedad de <b>ArteCO</b></i>
 </body>
-
-</html>

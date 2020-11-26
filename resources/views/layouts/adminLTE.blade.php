@@ -1,7 +1,7 @@
 @extends('adminlte::page')
 
 @section('title', 'portal arteCol')
-    
+
 @section('content_header')
     @yield('content_header-child')
 @stop
@@ -11,7 +11,7 @@
 @endsection
 
 @section('css')
-    
+    @yield('css-chield')
 @endsection
 
 @section('js')

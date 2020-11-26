@@ -165,7 +165,6 @@ function obtenerEvento(e) {
         cantidad = producto.querySelector('input').value;
         let actualizarMontos = document.querySelectorAll('#subtotales');
         let actualizarMontosInput = document.querySelector('#subtotales input');
-        console.log(actualizarMontos);
         productosLS = obtenerProductosLocalStorage();
         productosLS.forEach(function (productoLS, index) {
             if (productoLS.id === id) {
@@ -207,7 +206,7 @@ function leerLocalStorageCompra() {
             <td>
             <a href="#" class="borrar-producto fas fa-trash" style="font-size:30px" data-id="${producto.id}"></a>
             </td>
-            <input type="hidden" id="subtotales" name="id[]" value="${producto.id}"  class="border-0" readonly style="background-color: white;">
+            <input type="hidden" id="id" name="id[]" value="${producto.id}"  class="border-0" readonly style="background-color: white;">
             <input type="hidden" name="precio[]" id="precios" value="${producto.precio}">
             `;
         listaCompra.appendChild(row);

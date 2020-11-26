@@ -1,6 +1,8 @@
 <?php
 
 namespace App\Http\Controllers;
+
+use App\Models\calificacione;
 use PDF;
 
 use App\Models\producto;
@@ -79,16 +81,32 @@ class shopController extends Controller
     }
 
 
+    public function getCalificaciones($idProducto){
+        $calificaciones = new calificacione();
+
+        $listCalificacion = $calificaciones->where('productos_id', $idProducto);
+
+        $data = $listCalificacion->join('personas', 'personas.id', '=', 'calificaciones.personas_id')
+        ->select('personas.nombres','personas.apellidos','calificaciones.comentario',
+         'calificaciones.indice')->get();
+
+        return $data;
+    }
+
     public function detalleProducto($id){
+
         $modelproduct = new producto();
         $data = $modelproduct->join('personas', 'personas.id', '=', 'productos.emprendedores_id')
         ->where('productos.id', $id)->select('personas.nombres as nombreEmprendedor',
         'personas.apellidos as apellidoEmprendedor',
         'personas.telefono',
         'personas.direccion',
+        'productos.id',
         'productos.descripcion',
         'productos.imagen')->first();
-        return view('shop.detalleProducto', compact('data'));
+
+        $listCalificaciones = $this->getCalificaciones($id);
+        return view('shop.detalleProducto', compact('data', 'listCalificaciones'));
     }
 
 
@@ -104,7 +122,7 @@ class shopController extends Controller
         $person = $persona->all()->where('usuarios_id', $idUser)->first();
         $venta = new Venta();
         $data = $venta->all()->where('cliente_id', $person->id);
-        $pdf = PDF::loadView('pdf.ventareporte', compact('data'));
+        $pdf = PDF::loadView('pdf.comprareporte', compact('data'));
 
         return $pdf->stream();
     }
